@@ -43,9 +43,6 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnNextStep = new System.Windows.Forms.Button();
             this.btnRunAndStop = new System.Windows.Forms.Button();
-            this.lbCoordinates = new System.Windows.Forms.Label();
-            this.lbCurrentX = new System.Windows.Forms.Label();
-            this.lbCurrentY = new System.Windows.Forms.Label();
             this.btnStop = new System.Windows.Forms.Button();
             this.endlessCycleTimer = new System.Windows.Forms.Timer(this.components);
             this.pField = new Project_Life.DoubleBufferedPanel();
@@ -134,7 +131,7 @@
             // btnRandomPlacement
             // 
             this.btnRandomPlacement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRandomPlacement.Location = new System.Drawing.Point(646, 376);
+            this.btnRandomPlacement.Location = new System.Drawing.Point(646, 146);
             this.btnRandomPlacement.Name = "btnRandomPlacement";
             this.btnRandomPlacement.Size = new System.Drawing.Size(87, 29);
             this.btnRandomPlacement.TabIndex = 2;
@@ -145,7 +142,7 @@
             // btnClear
             // 
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(646, 411);
+            this.btnClear.Location = new System.Drawing.Point(646, 181);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(87, 29);
             this.btnClear.TabIndex = 4;
@@ -175,33 +172,6 @@
             this.btnRunAndStop.UseVisualStyleBackColor = true;
             this.btnRunAndStop.Click += new System.EventHandler(this.btnRunAndStop_Click);
             // 
-            // lbCoordinates
-            // 
-            this.lbCoordinates.AutoSize = true;
-            this.lbCoordinates.Location = new System.Drawing.Point(643, 207);
-            this.lbCoordinates.Name = "lbCoordinates";
-            this.lbCoordinates.Size = new System.Drawing.Size(31, 13);
-            this.lbCoordinates.TabIndex = 7;
-            this.lbCoordinates.Text = "(0, 0)";
-            // 
-            // lbCurrentX
-            // 
-            this.lbCurrentX.AutoSize = true;
-            this.lbCurrentX.Location = new System.Drawing.Point(643, 262);
-            this.lbCurrentX.Name = "lbCurrentX";
-            this.lbCurrentX.Size = new System.Drawing.Size(14, 13);
-            this.lbCurrentX.TabIndex = 8;
-            this.lbCurrentX.Text = "X";
-            // 
-            // lbCurrentY
-            // 
-            this.lbCurrentY.AutoSize = true;
-            this.lbCurrentY.Location = new System.Drawing.Point(643, 275);
-            this.lbCurrentY.Name = "lbCurrentY";
-            this.lbCurrentY.Size = new System.Drawing.Size(14, 13);
-            this.lbCurrentY.TabIndex = 9;
-            this.lbCurrentY.Text = "Y";
-            // 
             // btnStop
             // 
             this.btnStop.Enabled = false;
@@ -230,7 +200,6 @@
             this.pField.Paint += new System.Windows.Forms.PaintEventHandler(this.pField_Paint);
             this.pField.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pField_MouseDown);
             this.pField.MouseHover += new System.EventHandler(this.pField_MouseHover);
-            this.pField.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pField_MouseMove);
             this.pField.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pField_MouseUp);
             // 
             // controlsTooltip
@@ -245,9 +214,6 @@
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(758, 453);
             this.Controls.Add(this.btnStop);
-            this.Controls.Add(this.lbCurrentY);
-            this.Controls.Add(this.lbCurrentX);
-            this.Controls.Add(this.lbCoordinates);
             this.Controls.Add(this.btnRunAndStop);
             this.Controls.Add(this.btnNextStep);
             this.Controls.Add(this.btnClear);
@@ -281,9 +247,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnNextStep;
         private System.Windows.Forms.Button btnRunAndStop;
-        private System.Windows.Forms.Label lbCoordinates;
-        private System.Windows.Forms.Label lbCurrentX;
-        private System.Windows.Forms.Label lbCurrentY;
         private DoubleBufferedPanel pField;
         private System.Windows.Forms.ToolStripMenuItem saveAsImageToolStripMenuItem;
         private System.Windows.Forms.Button btnStop;

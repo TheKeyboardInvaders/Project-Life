@@ -16,3 +16,12 @@ C:\Workspace\Project-Life\Project Life\Project Life\obj\Debug\Project Life.cspro
 C:\Workspace\Project-Life\Project Life\Project Life\obj\Debug\Project_Life.Form1.resources
 C:\Workspace\Project-Life\Project Life\Project Life\obj\Debug\Project_Life.Properties.Resources.resources
 C:\Workspace\Project-Life\Project Life\Project Life\obj\Debug\Project Life.csproj.GenerateResource.Cache
+C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\Project Life.exe.config
+C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\obj\Debug\Project Life.exe
+C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\obj\Debug\Project Life.pdb
+C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\obj\Debug\Project Life.csprojResolveAssemblyReference.cache
+C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\obj\Debug\Project_Life.Form1.resources
+C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\obj\Debug\Project_Life.Properties.Resources.resources
+C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\obj\Debug\Project Life.csproj.GenerateResource.Cache
+C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\Project Life.exe
+C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\Project Life.pdb

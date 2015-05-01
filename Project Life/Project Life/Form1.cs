@@ -61,9 +61,7 @@ namespace Project_Life
                 for (int i = 0; i < e.Y; i = i + 12)
                 {
                     currentY++;
-                }
-                lbCurrentX.Text = currentX.ToString();
-                lbCurrentY.Text = currentY.ToString();
+                }                
 
                 Creature tmpCreature = new Creature(currentX - 1, currentY - 1);
                 tribe.Add(tmpCreature);
@@ -85,9 +83,6 @@ namespace Project_Life
                 {
                     currentY++;
                 }
-                
-                lbCurrentX.Text = currentX.ToString();
-                lbCurrentY.Text = currentY.ToString();
 
                 currentX--;
                 currentY--;
@@ -134,23 +129,14 @@ namespace Project_Life
             }
         }
         #endregion
-
-        #region Coordinates
-        private void pField_MouseMove(object sender, MouseEventArgs e)
-        {
-            lbCoordinates.Text = "(" + e.X + "," + e.Y + ")";
-        }
-        #endregion
-
+        
         #region New simulation
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btnStop_Click(sender, e);
             tribe.Clear();
             map.Clear();
-            pField.Refresh();
-            lbCurrentX.Text = "0";
-            lbCurrentY.Text = "0";
+            pField.Refresh();            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -438,12 +424,13 @@ namespace Project_Life
         #region 
         private void pField_MouseHover(object sender, EventArgs e)
         {
-            controlsTooltip_Popup(sender, popupe);
+            //controlsTooltip_Popup(sender, popupe);
         }
 
         private void controlsTooltip_Popup(object sender, PopupEventArgs e)
         {
 
         }
+        #endregion
     }
 }
