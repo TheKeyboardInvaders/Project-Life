@@ -42,11 +42,11 @@
             this.btnRandomPlacement = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnNextStep = new System.Windows.Forms.Button();
-            this.btnRunAndStop = new System.Windows.Forms.Button();
+            this.btnRun = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
-            this.endlessCycleTimer = new System.Windows.Forms.Timer(this.components);
-            this.pField = new Project_Life.DoubleBufferedPanel();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.controlsTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.pField = new Project_Life.DoubleBufferedPanel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,20 +161,19 @@
             this.btnNextStep.UseVisualStyleBackColor = true;
             this.btnNextStep.Click += new System.EventHandler(this.btnNextStep_Click);
             // 
-            // btnRunAndStop
+            // btnRun
             // 
-            this.btnRunAndStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRunAndStop.Location = new System.Drawing.Point(646, 76);
-            this.btnRunAndStop.Name = "btnRunAndStop";
-            this.btnRunAndStop.Size = new System.Drawing.Size(87, 29);
-            this.btnRunAndStop.TabIndex = 6;
-            this.btnRunAndStop.Text = "Run";
-            this.btnRunAndStop.UseVisualStyleBackColor = true;
-            this.btnRunAndStop.Click += new System.EventHandler(this.btnRunAndStop_Click);
+            this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRun.Location = new System.Drawing.Point(646, 76);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(87, 29);
+            this.btnRun.TabIndex = 6;
+            this.btnRun.Text = "Run";
+            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // btnStop
             // 
-            this.btnStop.Enabled = false;
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStop.Location = new System.Drawing.Point(646, 41);
             this.btnStop.Name = "btnStop";
@@ -184,10 +183,14 @@
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
-            // endlessCycleTimer
+            // Timer
             // 
-            this.endlessCycleTimer.Interval = 500;
-            this.endlessCycleTimer.Tick += new System.EventHandler(this.endlessCycleTimer_Tick);
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
+            // controlsTooltip
+            // 
+            this.controlsTooltip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.controlsTooltip.Popup += new System.Windows.Forms.PopupEventHandler(this.controlsTooltip_Popup);
             // 
             // pField
             // 
@@ -202,11 +205,6 @@
             this.pField.MouseHover += new System.EventHandler(this.pField_MouseHover);
             this.pField.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pField_MouseUp);
             // 
-            // controlsTooltip
-            // 
-            this.controlsTooltip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.controlsTooltip.Popup += new System.Windows.Forms.PopupEventHandler(this.controlsTooltip_Popup);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,7 +212,7 @@
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(758, 453);
             this.Controls.Add(this.btnStop);
-            this.Controls.Add(this.btnRunAndStop);
+            this.Controls.Add(this.btnRun);
             this.Controls.Add(this.btnNextStep);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRandomPlacement);
@@ -246,11 +244,11 @@
         private System.Windows.Forms.Button btnRandomPlacement;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnNextStep;
-        private System.Windows.Forms.Button btnRunAndStop;
+        private System.Windows.Forms.Button btnRun;
         private DoubleBufferedPanel pField;
         private System.Windows.Forms.ToolStripMenuItem saveAsImageToolStripMenuItem;
         private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.Timer endlessCycleTimer;
+        private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.ToolTip controlsTooltip;
     }
 }

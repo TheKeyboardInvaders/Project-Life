@@ -158,8 +158,14 @@ namespace Project_Life
         #region One step of simulation
         private void btnNextStep_Click(object sender, EventArgs e)
         {
-            lookForCreature(ref tribe, ref map);
-            pField.Refresh();
+            if (tribe.Count > 0)
+            {
+                btnStop_Click(sender, e);
+                lookForCreature(ref tribe, ref map);
+                pField.Refresh();
+            }
+            else
+                MessageBox.Show("О Владыка, сотвори существ, прежде чем узреть их Жизнь!");
         }
         #endregion
 
@@ -289,24 +295,29 @@ namespace Project_Life
         #endregion
 
         #region Endless cycle
-        private void btnRunAndStop_Click(object sender, EventArgs e)
+        private void btnRun_Click(object sender, EventArgs e)
         {
-            btnRunAndStop.Enabled = false;
-            btnStop.Enabled = true;
-            endlessCycleTimer.Start();
+            if (tribe.Count > 0)
+            {
+                btnRun.Enabled = false;
+                Timer.Start();
+            }
+            else
+                MessageBox.Show("О Владыка, сотвори существ, прежде чем узреть их Жизнь!");
         }
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            btnRunAndStop.Enabled = true;
-            btnStop.Enabled = false;
-            endlessCycleTimer.Stop();
+            btnRun.Enabled = true;
+            Timer.Stop();
         }
 
-        private void endlessCycleTimer_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
             lookForCreature(ref tribe, ref map);
             pField.Refresh();
+            if (tribe.Count == 0)
+                btnStop_Click(sender, e);
         }
         #endregion
 
