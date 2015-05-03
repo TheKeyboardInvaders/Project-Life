@@ -13,10 +13,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Drawing.Imaging;
 using System.Threading;
 using System.Timers;
+using MetroFramework;
+using MetroFramework.Forms;
 
 namespace Project_Life
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MetroForm
     {
         #region Service
         int numOfCells = 120;
@@ -107,9 +109,9 @@ namespace Project_Life
             Graphics g = e.Graphics;
             g.SmoothingMode = SmoothingMode.AntiAlias;
             Pen line = new Pen(Color.FromArgb(127, 140, 141));
-            Brush fill = new SolidBrush(Color.FromArgb(52, 152, 219));
+            Brush fill = new SolidBrush(Color.FromArgb(20, 197, 109));
 
-            Pen creatureDraw = new Pen(Color.FromArgb(41, 128, 185));
+            Pen creatureDraw = new Pen(Color.FromArgb(0, 177, 89));
             creatureDraw.Width = 2;
 
             for (int y = 0; y < numOfCells; ++y)
@@ -165,7 +167,7 @@ namespace Project_Life
                 pField.Refresh();
             }
             else
-                MessageBox.Show("О Владыка, сотвори существ, прежде чем узреть их Жизнь!");
+                MetroMessageBox.Show(this, "О Владыка, сотвори существ, прежде чем узреть их Жизнь!", "Ошибочка :С");
         }
         #endregion
 
@@ -294,7 +296,7 @@ namespace Project_Life
         }
         #endregion
 
-        #region Endless cycle
+        #region Random mode
         private void btnRun_Click(object sender, EventArgs e)
         {
             if (tribe.Count > 0)
@@ -303,7 +305,7 @@ namespace Project_Life
                 Timer.Start();
             }
             else
-                MessageBox.Show("О Владыка, сотвори существ, прежде чем узреть их Жизнь!");
+                MetroMessageBox.Show(this, "О Владыка, сотвори существ, прежде чем узреть их Жизнь!", "Ошибочка :С");
         }
 
         private void btnStop_Click(object sender, EventArgs e)
@@ -432,7 +434,7 @@ namespace Project_Life
         }
         #endregion
 
-        #region 
+        #region What the #@?*
         private void pField_MouseHover(object sender, EventArgs e)
         {
             //controlsTooltip_Popup(sender, popupe);
