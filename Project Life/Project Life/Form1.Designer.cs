@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,26 +39,30 @@
             this.saveAsImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnRandomPlacement = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnNextStep = new System.Windows.Forms.Button();
-            this.btnRun = new System.Windows.Forms.Button();
-            this.btnStop = new System.Windows.Forms.Button();
+            this.btnRandomPlacement = new MetroFramework.Controls.MetroButton();
+            this.btnClear = new MetroFramework.Controls.MetroButton();
+            this.btnNextStep = new MetroFramework.Controls.MetroButton();
+            this.btnRun = new MetroFramework.Controls.MetroButton();
+            this.btnStop = new MetroFramework.Controls.MetroButton();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.controlsTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pField = new Project_Life.DoubleBufferedPanel();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(758, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.BackColor = System.Drawing.Color.White;
+            this.menuStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(2, 8);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(97, 24);
+            this.menuStrip.TabIndex = 1;
+            this.menuStrip.Text = "menuStrip";
             // 
             // fileToolStripMenuItem
             // 
@@ -130,57 +134,92 @@
             // 
             // btnRandomPlacement
             // 
-            this.btnRandomPlacement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRandomPlacement.Location = new System.Drawing.Point(646, 146);
+            this.btnRandomPlacement.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnRandomPlacement.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.btnRandomPlacement.Location = new System.Drawing.Point(630, 99);
             this.btnRandomPlacement.Name = "btnRandomPlacement";
-            this.btnRandomPlacement.Size = new System.Drawing.Size(87, 29);
-            this.btnRandomPlacement.TabIndex = 2;
+            this.btnRandomPlacement.Size = new System.Drawing.Size(115, 50);
+            this.btnRandomPlacement.Style = MetroFramework.MetroColorStyle.Green;
+            this.btnRandomPlacement.TabIndex = 1;
+            this.btnRandomPlacement.TabStop = false;
             this.btnRandomPlacement.Text = "Random";
-            this.btnRandomPlacement.UseVisualStyleBackColor = true;
+            this.btnRandomPlacement.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnRandomPlacement.UseCustomBackColor = true;
+            this.btnRandomPlacement.UseCustomForeColor = true;
+            this.btnRandomPlacement.UseSelectable = true;
+            this.btnRandomPlacement.UseStyleColors = true;
             this.btnRandomPlacement.Click += new System.EventHandler(this.btnRandomPlacement_Click);
             // 
             // btnClear
             // 
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(646, 181);
+            this.btnClear.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnClear.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.btnClear.Location = new System.Drawing.Point(630, 267);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(87, 29);
+            this.btnClear.Size = new System.Drawing.Size(115, 50);
+            this.btnClear.Style = MetroFramework.MetroColorStyle.Green;
             this.btnClear.TabIndex = 4;
-            this.btnClear.Text = "Clear the field";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.TabStop = false;
+            this.btnClear.Text = "Clear Field";
+            this.btnClear.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnClear.UseCustomBackColor = true;
+            this.btnClear.UseCustomForeColor = true;
+            this.btnClear.UseSelectable = true;
+            this.btnClear.UseStyleColors = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnNextStep
             // 
-            this.btnNextStep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNextStep.Location = new System.Drawing.Point(646, 111);
+            this.btnNextStep.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnNextStep.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.btnNextStep.Location = new System.Drawing.Point(630, 41);
             this.btnNextStep.Name = "btnNextStep";
-            this.btnNextStep.Size = new System.Drawing.Size(87, 29);
-            this.btnNextStep.TabIndex = 5;
-            this.btnNextStep.Text = "Next step";
-            this.btnNextStep.UseVisualStyleBackColor = true;
+            this.btnNextStep.Size = new System.Drawing.Size(115, 50);
+            this.btnNextStep.Style = MetroFramework.MetroColorStyle.Green;
+            this.btnNextStep.TabIndex = 0;
+            this.btnNextStep.TabStop = false;
+            this.btnNextStep.Text = "Next Step";
+            this.btnNextStep.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnNextStep.UseCustomBackColor = true;
+            this.btnNextStep.UseCustomForeColor = true;
+            this.btnNextStep.UseSelectable = true;
+            this.btnNextStep.UseStyleColors = true;
             this.btnNextStep.Click += new System.EventHandler(this.btnNextStep_Click);
             // 
             // btnRun
             // 
-            this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRun.Location = new System.Drawing.Point(646, 76);
+            this.btnRun.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnRun.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.btnRun.Location = new System.Drawing.Point(630, 155);
             this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(87, 29);
-            this.btnRun.TabIndex = 6;
+            this.btnRun.Size = new System.Drawing.Size(115, 50);
+            this.btnRun.Style = MetroFramework.MetroColorStyle.Green;
+            this.btnRun.TabIndex = 2;
+            this.btnRun.TabStop = false;
             this.btnRun.Text = "Run";
-            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnRun.UseCustomBackColor = true;
+            this.btnRun.UseCustomForeColor = true;
+            this.btnRun.UseSelectable = true;
+            this.btnRun.UseStyleColors = true;
             this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // btnStop
             // 
-            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop.Location = new System.Drawing.Point(646, 41);
+            this.btnStop.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnStop.FontWeight = MetroFramework.MetroButtonWeight.Light;
+            this.btnStop.Location = new System.Drawing.Point(630, 211);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(87, 29);
-            this.btnStop.TabIndex = 10;
+            this.btnStop.Size = new System.Drawing.Size(115, 50);
+            this.btnStop.Style = MetroFramework.MetroColorStyle.Green;
+            this.btnStop.TabIndex = 3;
+            this.btnStop.TabStop = false;
             this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.btnStop.UseCustomBackColor = true;
+            this.btnStop.UseCustomForeColor = true;
+            this.btnStop.UseSelectable = true;
+            this.btnStop.UseStyleColors = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // Timer
@@ -191,6 +230,12 @@
             // 
             this.controlsTooltip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.controlsTooltip.Popup += new System.Windows.Forms.PopupEventHandler(this.controlsTooltip_Popup);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
             // pField
             // 
@@ -209,7 +254,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(758, 453);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnRun);
@@ -217,15 +261,18 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRandomPlacement);
             this.Controls.Add(this.pField);
-            this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.menuStrip);
+            this.DisplayHeader = false;
             this.KeyPreview = true;
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStrip;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,7 +280,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
@@ -241,15 +288,16 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.Button btnRandomPlacement;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnNextStep;
-        private System.Windows.Forms.Button btnRun;
+        private MetroFramework.Controls.MetroButton btnRandomPlacement;
+        private MetroFramework.Controls.MetroButton btnClear;
+        private MetroFramework.Controls.MetroButton btnNextStep;
+        private MetroFramework.Controls.MetroButton btnRun;
+        private MetroFramework.Controls.MetroButton btnStop;
         private DoubleBufferedPanel pField;
-        private System.Windows.Forms.ToolStripMenuItem saveAsImageToolStripMenuItem;
-        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.ToolStripMenuItem saveAsImageToolStripMenuItem;        
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.ToolTip controlsTooltip;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 
