@@ -30,3 +30,5 @@ C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\M
 C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\MetroFramework.Design.pdb
 C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\MetroFramework.Fonts.pdb
+C:\Workspace\Project-Life\Project Life\Project Life\bin\Debug\MetroFramework.Design.pdb
+C:\Workspace\Project-Life\Project Life\Project Life\bin\Debug\MetroFramework.Fonts.pdb

@@ -33,6 +33,7 @@ namespace Project_Life
         {
             InitializeComponent();
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -349,7 +350,7 @@ namespace Project_Life
 
             SaveFileDialog saveDialog = new SaveFileDialog();
             saveDialog.Title = "Save simulation";
-            saveDialog.InitialDirectory = Application.StartupPath;
+            saveDialog.InitialDirectory = Application.StartupPath + @"\Saves\";
             saveDialog.Filter = "Simulation files (*.sim)|*.sim";
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {
@@ -380,7 +381,7 @@ namespace Project_Life
 
             OpenFileDialog openDialog = new OpenFileDialog();
             openDialog.Title = "Open simulation";
-            openDialog.InitialDirectory = Application.StartupPath;
+            openDialog.InitialDirectory = Application.StartupPath + @"\Saves\";
             openDialog.Filter = "Simulation files (*.sim)|*.sim";
 
             if (openDialog.ShowDialog() == DialogResult.OK)
@@ -443,6 +444,74 @@ namespace Project_Life
         private void controlsTooltip_Popup(object sender, PopupEventArgs e)
         {
 
+        }
+        #endregion
+
+        #region Presets
+        private void preset1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newToolStripMenuItem_Click(sender, e);
+
+            string InitialDirectory = Application.StartupPath + @"\Presets\Simulation 1.sim";
+            
+            try
+            {
+                using (Stream stream = File.Open(InitialDirectory, FileMode.Open, FileAccess.Read))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    tribe = (List<Creature>)bin.Deserialize(stream);
+                    map = (Map)bin.Deserialize(stream);
+                }
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("Can't open!", "Error");
+            }
+            pField.Refresh();
+        }
+
+        private void preset2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newToolStripMenuItem_Click(sender, e);
+
+            string InitialDirectory = Application.StartupPath + @"\Presets\";
+
+            try
+            {
+                using (Stream stream = File.Open(InitialDirectory + "Simulation 2.sim", FileMode.Open, FileAccess.Read))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    tribe = (List<Creature>)bin.Deserialize(stream);
+                    map = (Map)bin.Deserialize(stream);
+                }
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("Can't open!", "Error");
+            }
+            pField.Refresh();
+        }
+
+        private void preset3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newToolStripMenuItem_Click(sender, e);
+
+            string InitialDirectory = Application.StartupPath + @"\Presets\";
+
+            try
+            {
+                using (Stream stream = File.Open(InitialDirectory + "Simulation 3.sim", FileMode.Open, FileAccess.Read))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    tribe = (List<Creature>)bin.Deserialize(stream);
+                    map = (Map)bin.Deserialize(stream);
+                }
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("Can't open!", "Error");
+            }
+            pField.Refresh();
         }
         #endregion
     }
