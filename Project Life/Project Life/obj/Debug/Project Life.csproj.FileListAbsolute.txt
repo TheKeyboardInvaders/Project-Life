@@ -25,8 +25,5 @@ C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\obj\Debug\P
 C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\obj\Debug\Project Life.csproj.GenerateResource.Cache
 C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\Project Life.exe
 C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\Project Life.pdb
-C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\MetroFramework.Design.dll
-C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\MetroFramework.dll
-C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\MetroFramework.Design.pdb
 C:\Users\Сергей\Desktop\Project-Life\Project Life\Project Life\bin\Debug\MetroFramework.Fonts.pdb
