@@ -39,7 +39,6 @@
             this.saveAsImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRandomPlacement = new MetroFramework.Controls.MetroButton();
             this.btnClear = new MetroFramework.Controls.MetroButton();
             this.btnNextStep = new MetroFramework.Controls.MetroButton();
@@ -47,6 +46,7 @@
             this.btnStop = new MetroFramework.Controls.MetroButton();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.controlsTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pField = new Project_Life.DoubleBufferedPanel();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -132,12 +132,6 @@
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
             // btnRandomPlacement
             // 
             this.btnRandomPlacement.FontSize = MetroFramework.MetroButtonSize.Tall;
@@ -178,7 +172,6 @@
             // 
             this.btnNextStep.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnNextStep.FontWeight = MetroFramework.MetroButtonWeight.Light;
-            this.btnNextStep.Highlight = true;
             this.btnNextStep.Location = new System.Drawing.Point(630, 41);
             this.btnNextStep.Name = "btnNextStep";
             this.btnNextStep.Size = new System.Drawing.Size(115, 50);
@@ -237,6 +230,12 @@
             // 
             this.controlsTooltip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.controlsTooltip.Popup += new System.Windows.Forms.PopupEventHandler(this.controlsTooltip_Popup);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
             // pField
             // 
